@@ -1,0 +1,86 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agradecimiento</title>
+    <style>
+        .agradecimiento {
+            font-family: Arial, sans-serif;
+            color: #211e1e;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .agradecimiento h1 {
+            color: #000000;
+            margin: 0;
+            font-size: 2em;
+        }
+        .agradecimiento p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="agradecimiento">
+        <h1>Querido Vendedor,</h1>
+        <p>¡Muchas gracias por registrarte en nuestra plataforma! Valoramos profundamente tu interés en formar parte de nuestra comunidad y en explorar las oportunidades que ofrecemos. Estamos comprometidos a brindarte el mejor soporte y a facilitarte todas las herramientas necesarias para que tu experiencia sea exitosa y gratificante.</p>
+        <p>¡Bienvenido a bordo y esperamos colaborar contigo para alcanzar grandes logros!</p>
+        <p>Atentamente,</p>
+        <p><strong>El equipo de MangoApp</strong></p>
+    </div>
+</body>
+</html>
+
+<style>
+    .botonazo {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: white;
+        color: black;
+        border-radius: 1em;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid black;
+        box-shadow: 0 0 0 0 black;
+        text-decoration: none;
+    }
+
+    .container {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .button {
+        margin-bottom: 5px; 
+    }
+
+    .botonazo:hover {
+        transform: translateY(-4px) translateX(-2px);
+        box-shadow: 2px 5px 0 0 black;
+    }
+
+    .botonazo:active {
+        transform: translateY(2px) translateX(1px);
+        box-shadow: 0 0 0 0 black;
+    }
+</style>
+
+    <div class="container">
+        <div class="button">
+           <a class="botonazo" href="{% url 'emprendedor_nuevo' %}" class="btn btn-1">Registrarse como Emprendedor</a>
+        </div>
+    </div>
+   
+{% endblock contenidoQueCambia %}

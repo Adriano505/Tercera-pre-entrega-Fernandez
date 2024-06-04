@@ -1,0 +1,74 @@
+{% extends 'padre.html' %}
+
+
+
+{% block contenidoQueCambia %}
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>¡Vende a MangoApp!</h2>
+                <p class="lead">En MangoApp creemos que cada gran negocio comienza con una idea audaz y un emprendedor apasionado. Sabemos que tiene el potenical para transformar tu visón en realidad y queremos ser tu socio en este emocionante viaje.</p>
+                <p class="mb-0">Únete a nuestra comunidad de emprendedores innovadores y descubre el apoyo, los recursos y la financiación que necesitas para hacer crecer tu negocio. Completa el formulario en nuestra web y da el primer paso hacia un futuro lleno de posibilidades. ¡Tu sueño es tu realidad con MangoApp!.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock contenidoQueCambia %}
+    
+
+{% block formulariosAqui %}  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registrar y Buscar Emprendedor</title>
+        <style>
+            .botonazo {
+                display: inline-block;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                background-color: white;
+                color: black;
+                border-radius: 1em;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 0.5em 1em;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                border: 1px solid black;
+                box-shadow: 0 0 0 0 black;
+                text-decoration: none;
+            }
+    
+            .container {
+                text-align: center;
+                padding: 20px;
+            }
+    
+            .button {
+                margin-bottom: 5px; /* Space between buttons */
+            }
+    
+            .botonazo:hover {
+                transform: translateY(-4px) translateX(-2px);
+                box-shadow: 2px 5px 0 0 black;
+            }
+    
+            .botonazo:active {
+                transform: translateY(2px) translateX(1px);
+                box-shadow: 0 0 0 0 black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="button">
+                <a class="botonazo" href="{% url 'emprendedor_nuevo' %}">Registrarse como Emprendedor</a>
+            </div>
+            <div class="button">
+                <a class="botonazo" href="{% url 'emprendedor_buscar' %}">Buscar Emprendedor</a>
+            </div>
+        </div>
+    </body>
+    </html>
+{% endblock formulariosAqui %}

@@ -1,0 +1,76 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>Invierte a MangoApp</h2>
+                <p class="lead">En MangoApp creemos en el poder de la inovación y la colaboración para transformar ideas en éxitos. Te invitamos a unirte a nuestra comunidad de inversores visionarios y a apoyar proyectos prometedores que están listos para despegar.</p>
+                <p class="mb-0">Completa el formulario en nuestra web para empezar a explorar oportunidades de inversión únicas. Sé parte del cambio, fomenta la creatividad y contrubye a la construcción de un futuro lleno de posibilidades. !Invierte en el mañana, hoy mismo!.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock contenidoQueCambia %}
+    
+
+{% block formulariosAqui %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar y Buscar Comprador</title>
+    <style>
+        .botonazo {
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: white;
+            color: black;
+            border-radius: 1em;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid black;
+            box-shadow: 0 0 0 0 black;
+            text-decoration: none;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .button {
+            margin-bottom: 5px; /* Space between buttons */
+        }
+
+        .botonazo:hover {
+            transform: translateY(-4px) translateX(-2px);
+            box-shadow: 2px 5px 0 0 black;
+        }
+
+        .botonazo:active {
+            transform: translateY(2px) translateX(1px);
+            box-shadow: 0 0 0 0 black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button">
+            <a class="botonazo" href="{% url 'inversor_nuevo' %}">Registrarse como Inversor</a>
+        </div>
+        <div class="button">
+            <a class="botonazo" href="{% url 'inversor_buscar' %}">Buscar Inversor</a>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock formulariosAqui %}
+    
+    

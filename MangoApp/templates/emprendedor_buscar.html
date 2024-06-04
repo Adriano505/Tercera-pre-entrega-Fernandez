@@ -1,0 +1,28 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+    <h1>Buscar Comprador</h1>
+    <form method="get">
+    {{ form.as_p }}
+    <button type="submit">Buscar</button>
+    </form>
+{% endblock contenidoQueCambia %}
+    
+
+{% block formulariosAqui %}
+<ul>
+    {% if request.GET.nombre or request.GET.emprendimiento %}
+    {% if results %}
+        <ul>
+            {% for emprendedor in results %}
+                <li>{{ emprendedor.nombre }} - {{ emprendedor.emprendimiento }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+{% endif %}
+</ul>
+    <a href="{% url 'inicio' %}" class="btn">Volver a la página principal</a>
+{% endblock formulariosAqui %}

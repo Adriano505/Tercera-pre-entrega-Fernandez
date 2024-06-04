@@ -1,0 +1,12 @@
+{% extends 'padre.html' %}
+
+
+{% block formulariosAqui %}
+<meta charset="UTF-8">
+<title>Nuevo Emprendedor</title>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock formulariosAqui %}
